@@ -13,4 +13,9 @@ class ArticleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Articles
-        fields = ['id', 'title', 'body', 'owner']
+        fields = ['id', 'title', 'body', 'owner', 'view']
+
+class ArticleByUserView(serializers.ModelSerializer):
+    class Meta:
+        model = Articles
+        fields = ['id', 'title', 'body', 'view', 'owner']
